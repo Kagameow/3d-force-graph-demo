@@ -4,6 +4,7 @@ import { onMounted, ref } from 'vue';
 import type { Pokemon, PokemonNode, PokemonTypeNode } from '@/types';
 import { extractPokemonData, typeColorsMap } from '@/components/KnowledgeGraph/utils';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import pokemon from '@/assets/datasets/pokemon.json?url';
 
 const emit = defineEmits({
   nodeClick: (node: Pokemon) => {
@@ -35,7 +36,7 @@ onMounted(() => {
       const pokemon = extractPokemonData(node as PokemonNode);
       emit('nodeClick', pokemon);
     })
-    .jsonUrl('src/datasets/pokemon.json')
+    .jsonUrl(pokemon)
     .postProcessingComposer()
     .addPass(bloomPass);
 });
