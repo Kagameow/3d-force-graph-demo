@@ -16,3 +16,13 @@ export type Pokemon = {
 export type PokemonNode = Pokemon & {
   [key: string]: any;
 };
+
+export type PokemonType = {
+  id: string;
+  name: string;
+  val: number;
+};
+
+export type PokemonTypeNode = PokemonType & {
+  [key: string]: any;
+};
