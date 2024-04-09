@@ -12,7 +12,7 @@ defineProps({
 
 <template>
   <div class="pokemon-card">
-    <h1>Pokemon Card</h1>
+    <h2>Pokemon Card</h2>
     <p
       v-for="(property, key) in pokemonData"
       :key="key"
@@ -31,6 +31,7 @@ defineProps({
   position: absolute;
   top: 60px;
   left: 30px;
-  max-width: 200px;
+  max-width: 250px;
+  background-color: #2c3e50;
 }
 </style>
